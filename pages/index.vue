@@ -47,6 +47,18 @@
         <img src="../assets/images/img3.jpg" alt="">
         <img src="../assets/images/img4.jpg" alt="">
       </div>
+      <div class="apps flex justify-between items-center m-3 p-4">
+        <div class="flex items-center log">
+        <img src="../assets/images/footerLogo.png" class="logo"  alt="">
+          <h3 class="m-0 mr-2" style="color: white">دانلود اپلیکیشن</h3>
+          </div>
+        <div class="flex download">
+          <img src="https://www.digikala.com/statics/img/svg/appStores/google-play.svg" class="m-2" alt="">
+          <img src="https://www.digikala.com/statics/img/svg/appStores/coffe-bazzar.svg" class="m-2" alt="">
+          <img src="https://www.digikala.com/statics/img/svg/appStores/myket.svg" class="m-2" alt="">
+          <img src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg" class="m-2" alt="">
+        </div>
+      </div>
     </div>
     <div class="footerSite"><footersite/></div>
   </div>
@@ -99,6 +111,21 @@ export default {
   margin: 10px;
 
 }
+.apps{
+  background-color: #3c4b6d;
+  width: 97%;
+  border-radius: 10px;
+}
+.download img{
+  width: 25%;
+}
+@media only screen and (max-width: 890px){
+    .apps h3{
+      font-size: 12px;
+    }
+
+
+}
 
 @media only screen and (max-width: 824px){
 
@@ -115,7 +142,38 @@ export default {
   .imgs img{
     width: 45%;
   }
+  .log{
+    display: none;
+
+  }
+  .download{
+    width: 100%;
+    justify-content: space-between;
+
+  }
+  .download img{
+    width: 45%;margin: 20px;
+
+  }
 }
+@media only screen and (max-width: 690px){
+    .apps{
+      flex-direction: column;
+    }
+   .download {
+
+     flex-wrap: wrap;
+   }
+  .log{
+    display:flex;
+    margin-bottom: 10px;
+  }
+  .log h3{
+    font-size: 20px;
+  }
+
+  }
+
 @media only screen and (max-width: 444px){
 	.items{
     flex-wrap: wrap;
@@ -133,4 +191,9 @@ export default {
     }
 
   }
+@media only screen and (max-width: 362px){
+   .download img{
+     width: 100%;
+   }
+   }
 </style>
