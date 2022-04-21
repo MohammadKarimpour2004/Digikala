@@ -11,10 +11,10 @@
 <script>
 export default {
   name: "grups",
-  props:['title','text','img','addres','rl'],
+  props:['title','text','img'],
   methods:{
     link(){
-      this.$router.push(`/market/${this.addres}`)
+      this.$router.push('/market')
     }
 
   }

@@ -1,7 +1,10 @@
 <template>
   <div class="janbe flex flex-col justify-between">
     <div class="headerSite w-full flex justify-between items-center m-2">
-      <input @keyup.enter="searchs" v-model="search" class="input is-danger w-96" type="search" placeholder="جستجو">
+      <div class="flex">
+      <img src="https://www.digikala.com/statics/img/svg/logo.svg" style="width: 115px;" alt="">
+      <input @keyup.enter="searchs" v-model="search" class="input is-danger w-96 mr-3" type="search" placeholder="جستجو">
+        </div>
       <div>
       <hederMarket/>
       </div>

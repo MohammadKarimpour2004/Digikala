@@ -4,8 +4,8 @@
    <img src="https://dkstatics-public.digikala.com/digikala-adservice-banners/0b95274f4638c9d7dddb46e2ea65fa1c22787e62_1647358133.jpg?x-oss-process=image/quality,q_95">
   </div>
   <div class="menus grid w-full h-28 content-between">
-    <div class="search-user flex items-center w-full justify-end">
-
+    <div class="search-user flex items-center w-full justify-between">
+      <img src="https://www.digikala.com/statics/img/svg/logo.svg" style="width: 115px;" alt="">
       <div class="userbtn flex items-center">
         <div>
           <nuxt-link to="/user/profile" id="profile" v-if="log" class="flex items-center text-dark p-2 login" title="پروفایل">
@@ -105,6 +105,6 @@ img{
     .por{
       display: none;
     }
-    
+
 }
 </style>

@@ -3,24 +3,24 @@
    <div class="headerSite">
      <headersite/>
    </div>
-    <div class="content">
+    <div class="content flex flex-col items-center ">
       <div class="title flex justify-center  w-full ">
         <VueSlickCarousel class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
-          <nuxt-link to="./market/xorake"><img src="../assets/images/xorake.jpg" alt="خوراکی"></nuxt-link>
-          <nuxt-link to="./market/sanate"><img src="../assets/images/sanate.jpg" alt="صنعتی"></nuxt-link>
-          <nuxt-link to="./market/xange"><img src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
-          <nuxt-link to="./market/janbe"><img src="../assets/images/janbe2.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/xorake.jpg" alt="خوراکی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/sanate.jpg" alt="صنعتی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/janbe2.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
-        </div>
-      <div class="items flex justify-evenly mb-4">
+      </div>
+      <div class="items w-full flex justify-evenly mb-4">
         <div v-for="item in items" class="flex flex-col items-center imgitem ">
-        <a href="#"><img :src="require(`./../assets/images/${item.number}.png`)"  alt="img" width="55"></a>
-        <p class="text-s">{{item.text}}</p>
+          <a href="#"><img :src="require(`./../assets/images/${item.number}.png`)"  alt="img" width="55"></a>
+          <p class="text-s">{{item.text}}</p>
         </div>
       </div>
-      <div class="images flex ">
+      <div class="images flex justify-center">
         <img src="../assets/images/profile.jpg" style="width: 65%;" class=" m-3 rounded-lg" alt="">
-        <img src="../assets/images/car.jpg" style="width: 30%" class=" m-3 rounded-lg" alt="">
+        <img src="../assets/images/car.jpg" style="width: 30%" class=" b m-3 rounded-lg" alt="">
       </div>
 
       <div class="grups">
@@ -47,7 +47,7 @@
         <img src="../assets/images/img3.jpg" alt="">
         <img src="../assets/images/img4.jpg" alt="">
       </div>
-      <div class="apps flex justify-between items-center m-3 p-4">
+      <div class="apps flex justify-between items-center mt-12 p-4">
         <div class="flex items-center log">
         <img src="../assets/images/footerLogo.png" class="logo"  alt="">
           <h3 class="m-0 mr-2" style="color: white">دانلود اپلیکیشن</h3>
@@ -171,6 +171,7 @@ export default {
   .log h3{
     font-size: 20px;
   }
+
 
   }
 
