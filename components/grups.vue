@@ -36,12 +36,7 @@ export default {
       width: 400px;
     }
 }
-@media only screen and (max-width: 660px){
-    img{
-      width: 300px;
-    }
-}
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 824px){
     .grup{
       flex-direction: column;
       align-items: center;
@@ -50,5 +45,6 @@ export default {
       width: 100%;
     }
 }
+
 
 </style>

@@ -58,16 +58,16 @@ export default {
       }
     },
     janbe(){
-      window.scrollTo(0,350)
+      window.scrollTo({top:1100, behavior: 'smooth'})
     },
     xange(){
-      window.scrollTo(0,850)
+      window.scrollTo({top:1550, behavior: 'smooth'})
     },
     sanate(){
-      window.scrollTo(0,1300)
+      window.scrollTo({top:2000, behavior: 'smooth'})
     },
     xorake(){
-      window.scrollTo(0,1800)
+      window.scrollTo({top:2600, behavior: 'smooth'})
     },
   },
   mounted() {

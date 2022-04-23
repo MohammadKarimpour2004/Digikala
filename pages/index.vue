@@ -12,7 +12,7 @@
           <nuxt-link to="./market"><img src="../assets/images/janbe2.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
       </div>
-      <div class="items w-full flex justify-evenly mb-4">
+      <div class="items w-full flex justify-evenly m-4 ">
         <div v-for="item in items" class="flex flex-col items-center imgitem ">
           <a href="#"><img :src="require(`./../assets/images/${item.number}.png`)"  alt="img" width="55"></a>
           <p class="text-s">{{item.text}}</p>
@@ -22,10 +22,10 @@
         <img src="../assets/images/profile.jpg" style="width: 65%;" class=" m-3 rounded-lg" alt="">
         <img src="../assets/images/car.jpg" style="width: 30%" class=" b m-3 rounded-lg" alt="">
       </div>
-
+ <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
       <div class="grups">
           <br>
-          <h1>سایت ما با تخبیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد</h1>
+
           <br>
         <img src="../assets/images/tt.jpg" style="width: 100%;" alt="">
           <br>
@@ -86,8 +86,8 @@ export default {
         {text:'دیجی پلاس',number:6},
         {text:'دیجی کلاب',number:7},
         {text:'پیندو',number:8}
-
-      ]
+      ],
+      product: this.$store.state.cart.products
     }
   }
 
@@ -119,6 +119,7 @@ export default {
 .download img{
   width: 25%;
 }
+
 @media only screen and (max-width: 890px){
     .apps h3{
       font-size: 12px;
@@ -153,7 +154,9 @@ export default {
   }
   .download img{
     width: 45%;margin: 20px;
-
+  }
+  .text-title{
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 690px){
@@ -171,6 +174,9 @@ export default {
   .log h3{
     font-size: 20px;
   }
+  .text-title{
+    font-size: 15px;
+  }
 
 
   }
@@ -183,6 +189,9 @@ export default {
   .imgitem{
     width: 60px;
     margin: 15px;
+  }
+  .text-title{
+    font-size: 11px;
   }
 
 }
