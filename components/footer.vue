@@ -1,6 +1,6 @@
 <template>
 <div class="footer w-full h-80 flex justify-between  ">
-
+  <!-- items -->
   <div class="links">
     <ul>
       <li><i class="bi bi-instagram text-pink-600 m-1"></i>اینستاگرام</li>
@@ -11,18 +11,13 @@
       <li><i class="bi bi-twitter text-blue-200 m-1"></i>تویتیر</li>
     </ul>
   </div>
+  <!-- images-->
   <div class="imgs flex flex-col justify-between">
     <img src="../assets/images/250x250.jpg" alt="" width="80" class="rounded-lg">
-        <img src="../assets/images/DK-rebranding2.jpg" alt="" width="80" class="rounded-lg">
+    <img src="../assets/images/DK-rebranding2.jpg" alt="" width="80" class="rounded-lg">
   </div>
 </div>
 </template>
-
-<script>
-export default {
-  name: "footer",
-}
-</script>
 
 <style scoped>
 .footer{
@@ -32,5 +27,4 @@ li{
   color: white;
   margin: 10px;
 }
-
 </style>

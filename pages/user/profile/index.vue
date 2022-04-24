@@ -3,30 +3,26 @@
     <div class="forms flex items-center flex-col justify-between">
       <div class="title mt-3 w-full flex justify-between flex-row-reverse items-center">
         <div class="img flex flex-col items-center">
-      <img v-if="url != null" :src="url" />
-      <img src="../../../assets/profile.jpg" v-if="url == null">
-
-      <div class="file m-4 is-small">
-        <label class="file-label">
-          <input class="file-input " type="file" name="image" @change="onFileChange">
-          <span class="file-cta">
-      <span class="file-label  button is-danger is-small">
-        آپلود عکس
-      </span>
-    </span>
-        </label>
-      </div>
+          <img v-if="url != null" :src="url" />
+          <img src="../../../assets/profile.jpg" v-if="url == null">
+          <div class="file m-4 is-small">
+            <label class="file-label">
+              <input class="file-input " type="file" name="image" @change="onFileChange">
+              <span class="file-cta">
+                <span class="file-label  button is-danger is-small">
+              آپلود عکس
+                </span>
+              </span>
+            </label>
+          </div>
         </div>
         <h1 class="text-4xl m-2">نام:{{name}}</h1>
       </div>
-
-<div class="info flex justify-end flex-col w-full">
-
+    <div class="info flex justify-end flex-col w-full">
       <h1 class="text-2xl m-2">ایمیل:{{email}}</h1>
-      
-</div>
+    </div>
       <div class="logout w-full flex justify-end">
-      <button @click="Logout" class="button is-danger m-3">خروج</button>
+        <button @click="Logout" class="button is-danger m-3">خروج</button>
       </div>
     </div>
   </div>
@@ -43,6 +39,7 @@ export default {
     }
   },
   methods:{
+    // add image
     onFileChange(e) {
       const file = e.target.files[0];
       this.url = URL.createObjectURL(file);
@@ -53,18 +50,17 @@ export default {
       this.$router.push('/')
     }
   },
+  //get user data
   mounted() {
     if (localStorage.getItem('user')){
-   let user =JSON.parse(localStorage.getItem('user'))
-     this.name = user.Fullname
-     this.email = user.Email
+      let user =JSON.parse(localStorage.getItem('user'))
+      this.name = user.Fullname
+      this.email = user.Email
    if (localStorage.getItem('img')){
        this.url = localStorage.getItem('img')
    }
     }
   }
-
-
 }
 </script>
 
@@ -84,5 +80,4 @@ img{
   border-radius: 50%;
   border: 2px solid black;
 }
-
 </style>

@@ -1,5 +1,6 @@
 <template>
 <div class="Login flex justify-center items-center">
+  <!-- login form box-->
   <div class="forms flex items-center flex-col">
     <div class="form">
       <div class="Email mt-6">
@@ -10,7 +11,6 @@
         <h1 class="mr-3 text-xl">پسورد</h1>
         <input v-model="Password" class="input is-danger m-3 p-3" type="password" placeholder="پسورد">
       </div>
-
       <button @click="Login" class="button is-danger mt-12 mr-3">ورود</button>
       <nuxt-link to="./SignIn" class="button is-outlined is-danger mt-12">ثبت و نام</nuxt-link>
     </div>
@@ -20,7 +20,6 @@
 
 <script>
 import swal from "sweetalert";
-
 export default {
   name: "index",
   data(){
@@ -55,6 +54,7 @@ export default {
             button: 'تایید'
           })
           localStorage.setItem('login' , 'true')
+          localStorage.setItem('marts',JSON.stringify([]))
           setTimeout(() => {
             this.$router.push('/')
           } , 2000)
@@ -72,7 +72,6 @@ export default {
       }
     }
   }
-
 }
 </script>
 
