@@ -29,6 +29,18 @@
       </div>
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
+
+      <div class="overproducts flex justify-between">
+        <div class="flex flex-col items-center justify-center">
+          <img src="" alt="">
+          <img src="" alt="">
+          <h3>مشاهده همه ></h3>
+        </div>
+        <div class="product">
+
+        </div>
+      </div>
+
       <!-- market grup -->
       <div class="grups">
           <br>
@@ -48,7 +60,7 @@
       </div>
       <br>
       <!-- 4 image -->
-      <div class="imgs flex justify-center items-center">
+      <div class="imgs flex justify-around items-center">
         <img src="../assets/images/img1.jpg" alt="">
         <img src="../assets/images/img2.jpg" alt="">
         <img src="../assets/images/img3.jpg" alt="">
@@ -125,6 +137,17 @@ export default {
 .download img{
   width: 25%;
 }
+.overproducts{
+  width: 97%;
+  height: 350px;
+  background-color: red;
+  border-radius: 10px;
+}
+.product{
+  width: 80%;height: 100%;
+  background-color: #3c4b6d;
+  border-radius: 10px;
+}
 @media only screen and (max-width: 890px){
     .apps h3{
       font-size: 12px;
@@ -157,6 +180,12 @@ export default {
   }
   .text-title{
     font-size: 20px;
+  }
+  .overproducts{
+    flex-direction: column;
+  }
+  .product{
+    width: 100%;
   }
 }
 @media only screen and (max-width: 690px){
