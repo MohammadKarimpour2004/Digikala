@@ -130,7 +130,7 @@ export default {
   width: 100%;
 }
 .images{
-  background-color: red;
+  background-color: #ef3a4f;
   padding: 15px;
 }
 .imgs img{
@@ -149,7 +149,7 @@ export default {
 .overproducts{
   width: 97%;
   height: 350px;
-  background-color: red;
+  background-color: #ef3a4f;
   border-radius: 10px;
 }
 .logoProduct{
@@ -204,6 +204,9 @@ export default {
     width: 100%;
     justify-content: center;
   }
+  .product h4{
+  font-size: 13px;
+}
 }
 @media only screen and (max-width: 690px){
     .apps{
@@ -244,5 +247,11 @@ export default {
    .download img{
      width: 100%;
    }
+  .overproducts{
+    height: 200px;
+  }
+  .product h4{
+  font-size: 10px;
+}
 }
 </style>
