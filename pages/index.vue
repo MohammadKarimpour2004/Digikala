@@ -30,14 +30,17 @@
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
 
-      <div class="overproducts flex justify-between">
-        <div class="flex flex-col items-center justify-center">
-          <img src="" alt="">
-          <img src="" alt="">
-          <h3>مشاهده همه ></h3>
+      <div class="overproducts flex justify-between mt-12 mb-12">
+        <div class="flex flex-col items-center justify-center logoProduct">
+          <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
+          <img src="../assets/images/General.png" style="width: 30%;" alt="">
+          <h4 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h4>
         </div>
-        <div class="product">
-
+        <div class="product flex">
+           <div v-for="item in overItems" class="flex flex-col items-center">
+             <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
+             <h4>{{item.qemat}} تومان </h4>
+           </div>
         </div>
       </div>
 
@@ -109,6 +112,12 @@ export default {
         {text:'دیجی کلاب',number:7},
         {text:'پیندو',number:8}
       ],
+      overItems:[
+        {img:39,qemat:'570,000'},
+        {img:40,qemat:'299,000'},
+        {img:46,qemat:'370,000'},
+        {img:48,qemat:'899,000'}
+      ]
     }
   }
 }
@@ -143,10 +152,13 @@ export default {
   background-color: red;
   border-radius: 10px;
 }
+.logoProduct{
+  width: 20%;
+}
 .product{
   width: 80%;height: 100%;
-  background-color: #3c4b6d;
-  border-radius: 10px;
+  background-color: #ffffff;
+  border-radius: 10px 0px 0px 10px;
 }
 @media only screen and (max-width: 890px){
     .apps h3{
@@ -186,6 +198,11 @@ export default {
   }
   .product{
     width: 100%;
+  }
+  .logoProduct{
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 690px){
