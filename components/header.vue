@@ -40,9 +40,14 @@ export default {
   data(){
     return{
       log: null,
-      img:null
+      img:null,
+      top:1600,
+      top2:2100,
+      top3:2600,
+      top4:3000
     }
   },
+
   methods:{
     cart(){
       if (localStorage.getItem('login')){
@@ -61,16 +66,16 @@ export default {
     },
     // scrolls event
     janbe(){
-      window.scrollTo({top:1100, behavior: 'smooth'})
+      window.scrollTo({top:this.top, behavior: 'smooth'})
     },
     xange(){
-      window.scrollTo({top:1550, behavior: 'smooth'})
+      window.scrollTo({top:this.top2, behavior: 'smooth'})
     },
     sanate(){
-      window.scrollTo({top:2000, behavior: 'smooth'})
+      window.scrollTo({top:this.top3, behavior: 'smooth'})
     },
     xorake(){
-      window.scrollTo({top:2600, behavior: 'smooth'})
+      window.scrollTo({top:this.top4, behavior: 'smooth'})
     },
   },
   mounted() {
@@ -78,6 +83,7 @@ export default {
         this.log = localStorage.getItem('login')
     }
         this.img = localStorage.getItem('img')
+
   }
 }
 </script>
