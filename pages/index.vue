@@ -30,11 +30,11 @@
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
 
-      <div class="overproducts flex justify-between mt-12 mb-12">
+       <div style="background-color: #941b80" class="overproducts flex justify-between mt-12 mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
-          <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
-          <img src="../assets/images/General.png" style="width: 30%;" alt="">
-          <h4 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h4>
+          <img src="https://www.digikala.com/statics/img/svg/digiplus-logo.svg" width="100"  alt="">
+          <img src="../assets/images/plus-widget.png" width="100" alt="">
+          <button  class="button is-white is-small ">عضویت<i class="bi bi-chevron-compact-left"></i></button>
         </div>
         <div class="product flex">
            <div v-for="item in overItems" class="flex flex-col items-center">
@@ -69,12 +69,26 @@
         <img src="../assets/images/img3.jpg" alt="">
         <img src="../assets/images/img4.jpg" alt="">
       </div>
+       <div class="overproducts flex justify-between mt-12 mb-12">
+        <div class="flex flex-col items-center justify-center logoProduct">
+          <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
+          <img src="../assets/images/General.png" width="100" alt="">
+          <h4 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h4>
+        </div>
+        <div class="product flex">
+           <div v-for="item in overItems2" style="width: 25%;" class="flex flex-col items-center">
+             <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
+             <h4>{{item.qemat}} تومان </h4>
+           </div>
+        </div>
+      </div>
       <!-- download apps -->
       <div class="apps flex justify-between items-center mt-12 p-4 mb-12">
         <div class="flex items-center log">
           <img src="../assets/images/footerLogo.png" class="logo"  alt="">
           <h3 class="m-0 mr-2" style="color: white">دانلود اپلیکیشن</h3>
         </div>
+
         <div class="flex download">
           <img src="https://www.digikala.com/statics/img/svg/appStores/google-play.svg" class="m-2" alt="">
           <img src="https://www.digikala.com/statics/img/svg/appStores/coffe-bazzar.svg" class="m-2" alt="">
@@ -82,6 +96,7 @@
           <img src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg" class="m-2" alt="">
         </div>
       </div>
+      <img src="../assets/images/473fd1fcad84d953715de963e0acc2c23b9b7bc8_1650898678.jpg" class="rounded-md" style="width: 97%;" alt="">
     </div>
     <!-- footer site -->
     <div class="footerSite"><footersite/></div>
@@ -117,6 +132,12 @@ export default {
         {img:40,qemat:'299,000'},
         {img:46,qemat:'370,000'},
         {img:48,qemat:'899,000'}
+      ],
+      overItems2:[
+        {img:16,qemat:'570,000'},
+        {img:38,qemat:'299,000'},
+        {img:30,qemat:'370,000'},
+        {img:44,qemat:'899,000'}
       ]
     }
   }
