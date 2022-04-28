@@ -3,7 +3,7 @@
   <!-- header site -->
   <div class="headerSite w-full flex justify-between items-center m-2">
       <div class="flex">
-        <img src="https://www.digikala.com/statics/img/svg/logo.svg" style="width: 115px;" alt="">
+        <img src="https://www.digikala.com/statics/img/svg/logo.svg" class="logo" style="width: 115px;" alt="">
         <!-- inpout for search item-->
         <input @keyup.enter="searchs" v-model="search" class="input is-danger w-96 mr-3" type="search" placeholder="جستجو">
       </div>
@@ -111,5 +111,13 @@ export default {
 <style scoped>
 .search{
   height: 100vh;
+}
+@media only screen and (max-width: 570px){
+   .logo{
+     display: none;
+   }
+  .input{
+    width: 90%;
+  }
 }
 </style>

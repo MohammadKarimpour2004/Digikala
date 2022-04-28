@@ -16,10 +16,12 @@
             </label>
           </div>
         </div>
-        <h1 class="text-4xl m-2">نام:{{name}}</h1>
+        <h1 class="text-4xl m-2 name">نام:{{name}}</h1>
       </div>
     <div class="info flex justify-end flex-col w-full">
       <h1 class="text-2xl m-2">ایمیل:{{email}}</h1>
+      <h1 class="text-2xl m-2">کیف پول: 200,000 تومان</h1>
+
     </div>
       <div class="logout w-full flex justify-end">
         <button @click="Logout" class="button is-danger m-3">خروج</button>
@@ -79,5 +81,10 @@ img{
   width: 120px; height: 120px;
   border-radius: 50%;
   border: 2px solid black;
+}
+@media only screen and (max-width: 450px){
+   .name{
+     font-size: 20px;
+   }
 }
 </style>
