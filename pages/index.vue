@@ -29,7 +29,7 @@
       </div>
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
-
+       <!-- 4 products -->
        <div style="background-color: #941b80" class="overproducts flex justify-between mt-12 mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/digiplus-logo.svg" width="100"  alt="">
@@ -69,6 +69,7 @@
         <img src="../assets/images/img3.jpg" alt="">
         <img src="../assets/images/img4.jpg" alt="">
       </div>
+      <!-- 4 products -->
        <div class="overproducts flex justify-between mt-12 mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
@@ -246,6 +247,14 @@ export default {
   .text-title{
     font-size: 15px;
   }
+  .overproducts{
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 500px){
+	.overproducts{
+    height: 200px;
+  }
 }
 @media only screen and (max-width: 444px){
 	.items{
@@ -258,11 +267,15 @@ export default {
   .text-title{
     font-size: 11px;
   }
+
 }
 @media only screen and (max-width: 400px){
 	  .imgs img{
       width: 95%;
     }
+  .overproducts{
+    height: 150px;
+  }
 }
 @media only screen and (max-width: 362px){
    .download img{

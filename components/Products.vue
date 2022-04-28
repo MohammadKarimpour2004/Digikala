@@ -43,7 +43,7 @@ export default {
          localStorage.setItem('marts', JSON.stringify(marts))
          swal({
            title: 'موفق' ,
-           text: 'کالا به سبد خرید اضافه شد!' ,
+           text:  `${this.title} به سبد خرید اضافه شد!`,
            icon: 'success' ,
            button: 'تایید'
          })

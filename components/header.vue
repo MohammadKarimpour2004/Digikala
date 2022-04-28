@@ -2,7 +2,7 @@
 <div class="header w-full">
   <!-- digikala logo-->
   <div class="image flex justify-center items-center">
-   <img src="https://dkstatics-public.digikala.com/digikala-adservice-banners/0b95274f4638c9d7dddb46e2ea65fa1c22787e62_1647358133.jpg?x-oss-process=image/quality,q_95">
+   <img  src="../assets/images/title.gif">
   </div>
   <!-- login & signin , mart page button-->
   <div class="menus grid w-full h-28 content-between">
