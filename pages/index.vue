@@ -9,14 +9,19 @@
       <!-- images -->
       <div class="title flex justify-center  w-full ">
         <VueSlickCarousel class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
-          <nuxt-link to="./market"><img src="../assets/images/xorake2.jpg" alt="خوراکی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/sanate2.jpg" alt="صنعتی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/title1.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/title2.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/title3.gif" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/janbe.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img src="../assets/images/title4.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/xorake2.jpg" alt="خوراکی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/sanate2.jpg" alt="صنعتی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title1.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title2.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title3.gif" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/janbe.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title4.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r1.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r2.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r3.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r4.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r5.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
       </div>
       <!-- items for option in site -->
@@ -47,7 +52,7 @@
            </div>
         </div>
       </div>
-
+{{screen}}
       <!-- market grup -->
       <div class="grups">
           <br>
@@ -101,7 +106,8 @@
           <img src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg" class="m-2" alt="">
         </div>
       </div>
-      <img src="../assets/images/473fd1fcad84d953715de963e0acc2c23b9b7bc8_1650898678.jpg" class="rounded-md" style="width: 97%;" alt="">
+      <img src="../assets/images/rr.jpg" v-if="this.screen == false" class="rounded-md" style="width: 97%;" alt="">
+      <img src="../assets/images/473fd1fcad84d953715de963e0acc2c23b9b7bc8_1650898678.jpg" v-if="this.screen == true" class="rounded-md" style="width: 97%;" alt="">
     </div>
     <!-- footer site -->
     <div class="footerSite"><footersite/></div>
@@ -121,6 +127,7 @@ export default {
   components:{headersite,grups,footersite,VueSlickCarousel},
   data(){
     return{
+      screen:true,
       // items for option site
       items:[
         {text:'دیجی کالا جت',number:1},
@@ -145,6 +152,15 @@ export default {
         {img:44,qemat:'899,000'}
       ]
     }
+  },
+  mounted() {
+    setInterval(()=>{
+    if (window.matchMedia("(max-width: 610px)").matches){
+        this.screen = false
+    }else {
+      this.screen = true
+    }
+    },1000)
   }
 }
 </script>
