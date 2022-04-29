@@ -7,8 +7,8 @@
   <!-- title and text -->
   <div class="titleAndtext">
     <div class="w-full flex justify-start flex-col">
-      <p class="text-white">{{title}}</p>
-      <p class="text-white">{{text}}</p>
+      <p class="text-white m-2" style="font-size: 15px">{{title}}</p>
+      <p class="text-white m-2" style="font-size: 10px">{{text}}</p>
     </div>
     <!-- button for add to mart page ...-->
     <div class="w-full flex justify-end flex-col">
@@ -68,4 +68,5 @@ export default {
   background-color:rgb(241,70,104);
   border: 2px solid rgb(241,70,104);
 }
+
 </style>

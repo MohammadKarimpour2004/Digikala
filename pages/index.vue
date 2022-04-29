@@ -11,8 +11,12 @@
         <VueSlickCarousel class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
           <nuxt-link to="./market"><img src="../assets/images/xorake2.jpg" alt="خوراکی"></nuxt-link>
           <nuxt-link to="./market"><img src="../assets/images/sanate2.jpg" alt="صنعتی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/title1.jpg" alt="جانبی"></nuxt-link>
           <nuxt-link to="./market"><img src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/title2.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/title3.gif" alt="جانبی"></nuxt-link>
           <nuxt-link to="./market"><img src="../assets/images/janbe.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img src="../assets/images/title4.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
       </div>
       <!-- items for option in site -->
@@ -30,13 +34,13 @@
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
        <!-- 4 products -->
-       <div style="background-color: #941b80" class="overproducts flex justify-between mt-12 mb-12">
+       <div style="background-color: #941b80; border: 5px solid #941b80" class="overproducts flex justify-between mt-12 mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/digiplus-logo.svg" width="100"  alt="">
           <img src="../assets/images/plus-widget.png" width="100" alt="">
           <button  class="button is-white is-small ">عضویت<i class="bi bi-chevron-compact-left"></i></button>
         </div>
-        <div class="product flex">
+        <div class="product flex justify-between">
            <div v-for="item in overItems" class="flex flex-col items-center">
              <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
              <h4>{{item.qemat}} تومان </h4>
@@ -76,8 +80,8 @@
           <img src="../assets/images/General.png" width="100" alt="">
           <h4 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h4>
         </div>
-        <div class="product flex">
-           <div v-for="item in overItems2" style="width: 25%;" class="flex flex-col items-center">
+        <div class="product flex justify-between">
+           <div v-for="item in overItems2"  class="flex flex-col items-center">
              <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
              <h4>{{item.qemat}} تومان </h4>
            </div>
@@ -135,9 +139,9 @@ export default {
         {img:48,qemat:'899,000'}
       ],
       overItems2:[
-        {img:16,qemat:'570,000'},
-        {img:38,qemat:'299,000'},
-        {img:30,qemat:'370,000'},
+        {img:6,qemat:'570,000'},
+        {img:42,qemat:'299,000'},
+        {img:47,qemat:'370,000'},
         {img:44,qemat:'899,000'}
       ]
     }
@@ -173,6 +177,7 @@ export default {
   height: 350px;
   background-color: #ef3a4f;
   border-radius: 10px;
+  border: 5px solid #ef3a4f;
 }
 .logoProduct{
   width: 20%;
@@ -193,6 +198,9 @@ export default {
   }
   .imgitem{
     width: 40px;
+  }
+  .imgitem p{
+    font-size: 5px;
   }
   .imgs{
   flex-wrap: wrap;
@@ -248,12 +256,12 @@ export default {
     font-size: 15px;
   }
   .overproducts{
-    height: 250px;
+    height: 299px;
   }
 }
 @media only screen and (max-width: 500px){
 	.overproducts{
-    height: 200px;
+    height: 287px;
   }
 }
 @media only screen and (max-width: 444px){
@@ -263,6 +271,9 @@ export default {
   .imgitem{
     width: 60px;
     margin: 15px;
+  }
+  .imgitem p{
+    font-size: 10px;
   }
   .text-title{
     font-size: 11px;
@@ -274,7 +285,7 @@ export default {
       width: 95%;
     }
   .overproducts{
-    height: 150px;
+    height: 228px;
   }
 }
 @media only screen and (max-width: 362px){
@@ -286,6 +297,9 @@ export default {
   }
   .product h4{
   font-size: 10px;
-}
+ }
+  .text-title{
+    font-size: 8px;
+  }
 }
 </style>

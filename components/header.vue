@@ -101,7 +101,7 @@ img{
 @media only screen and (max-width: 540px){
     button{
       width: 50px;
-      font-size: 10px;
+      font-size: 8px;
     }
     .por{
       display: none;

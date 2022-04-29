@@ -67,16 +67,16 @@ li{
 }
 @media only screen and (max-width: 520px){
     .text h1{
-      font-size: 12px;
+      font-size: 10px;
     }
   .text p{
-    font-size: 10px;
+    font-size: 8px;
   }
   .send h1{
-    font-size: 15px;
+    font-size: 12px;
   }
   .last{
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 @media only screen and (max-width: 460px){
@@ -84,7 +84,7 @@ li{
       flex-direction: column-reverse;
     }
     .last{
-      font-size: 8px;
+      font-size: 6px;
     }
   .text{
     width: 100%;
@@ -104,7 +104,7 @@ li{
     width: 100%;
   }
   .send h1{
-    font-size: 17px;
+    font-size: 12px;
   }
 }
 </style>

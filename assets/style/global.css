@@ -1,8 +1,13 @@
+@font-face {
+  font-family: Dirooz;
+  src: url("../font/Dirooz.eot") format('eot');
+  src: url("../font/Dirooz.ttf") format('ttf');
+  src: url("../font/Dirooz.woff") format('woff');
+  src: url("../font/Dirooz.woff2") format('woff2');
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "B Yekan+";
-
-
+  font-family: Dirooz;
 }
