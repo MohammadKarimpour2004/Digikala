@@ -25,7 +25,7 @@ export const state = () => ({
     {img:'22',title:'پفک',text:'پفک بزرگ',qemat:'6000',grup:'xorake',},
     {img:'23',title:'ال ای دی',text:' ال ای دی 70 اینچ',qemat:'20 میلیون',grup:'xange',},
     {img:'24',title:'چای',text:'چای معتر محمود',qemat:'100,000',grup:'xorake',},
-    {img:'25',title:'چای',text:'چای محمود',qemat:'',grup:'xorake',},
+    {img:'25',title:'چای',text:'چای محمود',qemat:'110,000',grup:'xorake',},
     {img:'26',title:'دریل',text:'مینی دریل',qemat:'1 میلیون',grup:'sanate',},
     {img:'27',title:'روغن موتور',text:'روغن موتور بهران',qemat:'160,000',grup:'sanate',},
     {img:'28',title:'روغن سرخ کردنی',text:'روغن سرخ کردنی',qemat:'35,000',grup:'xorake',},
@@ -49,7 +49,7 @@ export const state = () => ({
     {img:'46',title:'دیگ',text:'دیگ زود پز ',qemat:'2 میلیون',grup:'xange',},
     {img:'47',title:'ساعت',text:'ساعت مچی ',qemat:'1 میلیون',grup:'janbe',},
     {img:'48',title:'دریل',text:'دریل صنعتی ',qemat:'10 میلیون',grup:'sanate',},
-    //{img:'49',title:'ایرپاد',text:'ایرپاد مدل 13kM ',qemat:'2 میلیون',grup:'janbe',},
-    //{img:'50',title:'ایرپاد',text:'ایرپاد مدل 13kM ',qemat:'2 میلیون',grup:'janbe',},
+    {img:'49',title:'تخم مرغ',text:'تخم مرغ تازه',qemat:'20,000',grup:'xorake',},
+    {img:'50',title:'ماکارونی',text:'ماکارونی زر ماکارون ',qemat:'40,000',grup:'xorake',},
   ]
 })

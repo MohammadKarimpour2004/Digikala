@@ -1,6 +1,7 @@
 <template>
 <div class="marts flex flex-col items-center">
   <div class="header flex items-center justify-start">
+    <img src="../../assets/images/download-logo.png" class="ml-1" alt="">
     <h1>سبد خرید</h1>
   </div>
   <!-- items -->
@@ -49,7 +50,7 @@ export default {
   width: 98%;
   height: 130px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #ffffff;
   border: 4px solid #ef3a4f;
   padding: 10px;
   margin: 15px;
@@ -57,7 +58,7 @@ export default {
 .header{
   height: 80px;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   border-bottom: 2px solid black;
 }
 .header h1{

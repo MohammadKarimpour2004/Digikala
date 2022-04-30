@@ -38,7 +38,7 @@ export default {
            number:1
          }
          // push object in marts
-         marts.push(mart)
+         marts.unshift(mart)
         // set localstorage
          localStorage.setItem('marts', JSON.stringify(marts))
          swal({

@@ -28,6 +28,7 @@
         <button @click="sanate" class="button is-danger is-small is-outlined mr-2"  title="صنعتی"><i class="bi bi-wrench-adjustable-circle-fill"></i> صنعتی  </button>
         <button @click="xorake" class="button is-danger is-small is-outlined mr-2" title="خوراکی"><i class="bi bi-egg-fried"></i>خوراکی  </button>
       </div>
+       <p class="data ml-1" :title="Fulldate">{{date}}</p>
     </div>
   </div>
 </div>
@@ -41,6 +42,8 @@ export default {
     return{
       log: null,
       img:null,
+      datae:null,
+      Fulldate:null,
       top:1600,
       top2:2100,
       top3:2600,
@@ -84,6 +87,20 @@ export default {
         this.log = localStorage.getItem('login')
     }
         this.img = localStorage.getItem('img')
+    // get date
+    let date = new Date()
+    let option = {
+      weekday:'long',
+      day:'numeric'
+    }
+    let Fulloption = {
+      day:'numeric',
+      weekday:'long',
+      month:'long',
+      year:'numeric'
+    }
+    this.date = date.toLocaleDateString('fa-IR', option)
+    this.Fulldate = date.toLocaleDateString('fa-IR', Fulloption)
   }
 }
 </script>
@@ -105,6 +122,9 @@ img{
     }
     .por{
       display: none;
+    }
+    .data{
+      font-size: 15px;
     }
 }
 </style>

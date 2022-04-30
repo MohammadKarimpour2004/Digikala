@@ -295,6 +295,7 @@ export default {
     }
   .overproducts{
     height: 228px;
+    margin-bottom: 15px;
   }
 }
 @media only screen and (max-width: 362px){
@@ -302,7 +303,7 @@ export default {
      width: 100%;
    }
   .overproducts{
-    height: 200px;
+    height: 215px;
   }
   .product h4{
   font-size: 10px;
