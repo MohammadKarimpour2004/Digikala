@@ -29,6 +29,7 @@ export default {
     }
   },
   methods:{
+    // login
     Login(){
       if (localStorage.getItem('user')) {
         let user = JSON.parse(localStorage.getItem('user'))

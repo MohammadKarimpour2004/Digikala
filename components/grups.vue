@@ -1,6 +1,8 @@
 <template>
 <div class="grup flex  flex-row-reverse mt-12 p-3 rounded-lg mr-3">
-   <img @click="link" :src="require(`.././assets/images/${img}-small.jpg`)" alt="" class="m-4 rounded-lg">
+  <!-- image -->
+   <img @click="link" :src="require(`.././assets/images/grup/grup${img}.jpg`)" alt="" class="m-4 rounded-lg">
+  <!-- text -->
   <div class="text">
     <h1 @click="link">{{ title }}</h1>
     <p>{{ text }}</p>
@@ -9,6 +11,7 @@
 </template>
 <script>
 export default {
+  //get props
   name: "grups",
   props:['title','text','img'],
   methods:{
@@ -21,7 +24,7 @@ export default {
 <style scoped>
 .grup{
   background-color: #faf7f7;
-  width: 95%;
+  width: 96%;
 }
 @media only screen and (max-width: 1124px){
     img{

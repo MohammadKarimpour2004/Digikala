@@ -8,33 +8,35 @@
     <div class="content flex flex-col items-center ">
       <!-- images -->
       <div class="title flex justify-center  w-full ">
-        <VueSlickCarousel class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/xorake2.jpg" alt="خوراکی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/sanate2.jpg" alt="صنعتی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title1.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/xange.jpg" alt="خانگی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title2.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title3.gif" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/janbe.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == true" src="../assets/images/title4.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r1.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r2.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r3.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r4.jpg" alt="جانبی"></nuxt-link>
-          <nuxt-link to="./market"><img v-if="this.screen == false" src="../assets/images/r5.jpg" alt="جانبی"></nuxt-link>
+        <VueSlickCarousel v-if="screen > 610" class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd1.jpg" alt="خوراکی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd2.jpg" alt="صنعتی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd8.gif" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd4.jpg" alt="خانگی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd5.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd6.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd7.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd3.jpg" alt="جانبی"></nuxt-link>
+        </VueSlickCarousel>
+        <VueSlickCarousel v-if="screen <= 610" class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small1.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small2.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small3.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small4.jpg" alt="جانبی"></nuxt-link>
+          <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small5.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
       </div>
       <!-- items for option in site -->
       <div class="items w-full flex justify-evenly mt-12 mb-12">
         <div v-for="item in items" class="flex flex-col items-center imgitem ">
-          <a href="#"><img :src="require(`./../assets/images/${item.number}.png`)"  alt="img" width="55"></a>
+          <a href="#"><img :src="require(`./../assets/images/items/${item.number}.png`)"  alt="img" width="55"></a>
           <p class="text-s">{{item.text}}</p>
         </div>
       </div>
       <!-- 2 image-->
       <div class="images flex justify-center">
-        <img src="../assets/images/profile.jpg" style="width: 65%;" class=" m-3 rounded-lg" alt="">
-        <img src="../assets/images/car.jpg" style="width: 30%" class=" b m-3 rounded-lg" alt="">
+        <img src="../assets/images/next-items1.jpg" style="width: 65%;" class=" m-3 rounded-lg" alt="">
+        <img src="../assets/images/next-items2.jpg" style="width: 30%" class=" b m-3 rounded-lg" alt="">
       </div>
       <!-- off text to center -->
       <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
@@ -52,31 +54,27 @@
            </div>
         </div>
       </div>
-{{screen}}
+      <!-- last image -->
+      <img src="../assets/images/ferst-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 96%;" alt="">
+      <img src="../assets/images/ferst-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 96%;" alt="">
       <!-- market grup -->
-      <div class="grups">
+      <div class="grups flex flex-col items-center">
           <br>
+          <grups title="جانبی" text="انواع لوزم جانبی با کیفیت را از ما با بهترین قیمت ممکن بخرید! لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="1" addres="janbe"/>
           <br>
-          <img src="../assets/images/tt.jpg" style="width: 100%;" alt="">
+          <grups title="خانگی" text="اسایش را در خانه با محصولات ما افزایش دهید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="2" addres="xange"/>
           <br>
-          <grups title="جانبی" text="انواع لوزم جانبی با کیفیت را از ما با بهترین قیمت ممکن بخرید! لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="janbe" addres="janbe"/>
+          <grups title="صنعتی" text="کار خود را توسعه دهید با لوارم اصلی از سایت ما!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="3" addres="sanate"/>
           <br>
-          <br>
-          <grups title="خانگی" text="اسایش را در خانه با محصولات ما افزایش دهید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="xange" addres="xange"/>
-          <br>
-          <br>
-          <grups title="صنعتی" text="کار خود را توسعه دهید با لوارم اصلی از سایت ما!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="sanate" addres="sanate"/>
-          <br>
-          <br>
-          <grups title="خوراکی" text="خوراکی های سالم و خوشمزه و تازه را از این سایت تهیه کنید تا پرورش عالی را تجربه کنید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="xorake" addres="xorake"/>
+          <grups title="خوراکی" text="خوراکی های سالم و خوشمزه و تازه را از این سایت تهیه کنید تا پرورش عالی را تجربه کنید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="4" addres="xorake"/>
       </div>
       <br>
       <!-- 4 image -->
       <div class="imgs flex justify-around items-center">
-        <img src="../assets/images/img1.jpg" alt="">
-        <img src="../assets/images/img2.jpg" alt="">
-        <img src="../assets/images/img3.jpg" alt="">
-        <img src="../assets/images/img4.jpg" alt="">
+        <img src="../assets/images/4img/img1.jpg" alt="">
+        <img src="../assets/images/4img/img2.jpg" alt="">
+        <img src="../assets/images/4img/img3.jpg" alt="">
+        <img src="../assets/images/4img/img4.jpg" alt="">
       </div>
       <!-- 4 products -->
        <div class="overproducts flex justify-between mt-12 mb-12">
@@ -95,10 +93,10 @@
       <!-- download apps -->
       <div class="apps flex justify-between items-center mt-12 p-4 mb-12">
         <div class="flex items-center log">
-          <img src="../assets/images/footerLogo.png" class="logo"  alt="">
+          <img src="../assets/images/download-logo.png" class="logo"  alt="">
           <h3 class="m-0 mr-2" style="color: white">دانلود اپلیکیشن</h3>
         </div>
-
+        <!-- download for 4 divais -->
         <div class="flex download">
           <img src="https://www.digikala.com/statics/img/svg/appStores/google-play.svg" class="m-2" alt="">
           <img src="https://www.digikala.com/statics/img/svg/appStores/coffe-bazzar.svg" class="m-2" alt="">
@@ -106,8 +104,9 @@
           <img src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg" class="m-2" alt="">
         </div>
       </div>
-      <img src="../assets/images/rr.jpg" v-if="this.screen == false" class="rounded-md" style="width: 97%;" alt="">
-      <img src="../assets/images/473fd1fcad84d953715de963e0acc2c23b9b7bc8_1650898678.jpg" v-if="this.screen == true" class="rounded-md" style="width: 97%;" alt="">
+      <!-- last image -->
+      <img src="../assets/images/last-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 97%;" alt="">
+      <img src="../assets/images/last-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 97%;" alt="">
     </div>
     <!-- footer site -->
     <div class="footerSite"><footersite/></div>
@@ -121,13 +120,12 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import headersite from "~/components/header";
 import grups from "~/components/grups";
 import footersite from "~/components/footer";
-
 export default {
   name: 'home',
   components:{headersite,grups,footersite,VueSlickCarousel},
   data(){
     return{
-      screen:true,
+      screen:null,
       // items for option site
       items:[
         {text:'دیجی کالا جت',number:1},
@@ -146,21 +144,16 @@ export default {
         {img:48,qemat:'899,000'}
       ],
       overItems2:[
-        {img:6,qemat:'570,000'},
-        {img:42,qemat:'299,000'},
-        {img:47,qemat:'370,000'},
-        {img:44,qemat:'899,000'}
+        {img:6,qemat:'700,000'},
+        {img:42,qemat:'310,000'},
+        {img:47,qemat:'199,000'},
+        {img:44,qemat:'650,000'}
       ]
     }
   },
+  // get width size
   mounted() {
-    setInterval(()=>{
-    if (window.matchMedia("(max-width: 610px)").matches){
-        this.screen = false
-    }else {
-      this.screen = true
-    }
-    },1000)
+       this.screen = window.screen.width
   }
 }
 </script>
@@ -283,6 +276,7 @@ export default {
 @media only screen and (max-width: 444px){
 	.items{
     flex-wrap: wrap;
+    margin-top: 10px;
   }
   .imgitem{
     width: 60px;
@@ -294,7 +288,6 @@ export default {
   .text-title{
     font-size: 11px;
   }
-
 }
 @media only screen and (max-width: 400px){
 	  .imgs img{

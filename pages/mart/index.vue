@@ -3,9 +3,13 @@
   <div class="header flex items-center justify-start">
     <h1>سبد خرید</h1>
   </div>
+  <!-- items -->
  <div class="mart flex justify-between items-center" v-for="mart in marts">
    <div class="name flex flex-col justify-between h-full">
+     <div class="flex">
+     <img :src="require(`../../assets/product-img/${mart.img}.jpg`)" width="50" class="ml-3" alt="">
      <h1 class="text-3xl">{{mart.title}}</h1>
+     </div>
      <p>{{mart.qemat}} تومان</p>
    </div>
    <div class="more flex flex-col items-center justify-between">
@@ -61,5 +65,18 @@ export default {
 }
 .more{
   height: 100%;
+}
+@media only screen and (max-width: 540px){
+    .mart h1{
+      font-size: 20px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .mart h1{
+      font-size: 15px;
+    }
+  .mart p{
+    font-size: 10px;
+  }
 }
 </style>

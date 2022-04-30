@@ -1,9 +1,10 @@
 <template>
   <div class="header w-full flex items-center ml-4">
+    <!-- profile -->
     <div>
       <nuxt-link to="/user/profile" id="profile" v-if="log" class="flex items-center text-dark p-2 login" title="پروفایل">
         <img v-if="img != null" :src="img" />
-        <img src="../assets/profile.jpg" v-if="img == null">
+        <img src="../assets/images/profile.jpg" v-if="img == null">
       </nuxt-link>
       <nuxt-link to="./../user/SignIn" v-if="!log" class="flex items-center text-dark p-2 login button is-warning is-light" title="ثبت و نام | ورود"> ثبت و نام | ورود <i class="bi bi-person fs-1"></i></nuxt-link>
     </div>
@@ -21,6 +22,7 @@ export default {
     }
   },
   methods:{
+    // go to cart page
     cart(){
       if (localStorage.getItem('login')){
            this.$router.push('/mart')
@@ -37,6 +39,7 @@ export default {
       }
     }
   },
+  // get info
   mounted() {
     if (localStorage.getItem('login')){
        this.log = localStorage.getItem('login')

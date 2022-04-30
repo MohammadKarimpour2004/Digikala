@@ -68,5 +68,4 @@ export default {
   background-color:rgb(241,70,104);
   border: 2px solid rgb(241,70,104);
 }
-
 </style>

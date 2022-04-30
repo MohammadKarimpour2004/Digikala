@@ -2,9 +2,10 @@
   <div class="profile flex justify-center items-center">
     <div class="forms flex items-center flex-col justify-between">
       <div class="title mt-3 w-full flex justify-between flex-row-reverse items-center">
+        <!-- image profile -->
         <div class="img flex flex-col items-center">
           <img v-if="url != null" :src="url" />
-          <img src="../../../assets/profile.jpg" v-if="url == null">
+          <img src="../../../assets/images/profile.jpg" v-if="url == null">
           <div class="file m-4 is-small">
             <label class="file-label">
               <input class="file-input " type="file" name="image" @change="onFileChange">
@@ -16,12 +17,12 @@
             </label>
           </div>
         </div>
+        <!-- user info -->
         <h1 class="text-4xl m-2 name">نام:{{name}}</h1>
       </div>
     <div class="info flex justify-end flex-col w-full">
       <h1 class="text-2xl m-2">ایمیل:{{email}}</h1>
       <h1 class="text-2xl m-2">کیف پول: 200,000 تومان</h1>
-
     </div>
       <div class="logout w-full flex justify-end">
         <button @click="Logout" class="button is-danger m-3">خروج</button>
