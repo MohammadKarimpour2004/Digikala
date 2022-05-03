@@ -1,13 +1,11 @@
 <template>
 <div class="header w-full">
   <!-- digikala logo-->
-  <div class="image flex justify-center items-center">
-   <img  src="../assets/images/title.gif">
-  </div>
+  <img src="../assets/images/title.gif">
   <!-- login & signin , mart page button-->
   <div class="menus grid w-full h-28 content-between">
     <div class="search-user flex items-center w-full justify-between">
-       <img src="https://www.digikala.com/statics/img/svg/logo.svg" style="width: 115px;" alt="">
+       <img src="https://www.digikala.com/statics/img/svg/logo.svg" class="mr-2" style="width: 115px;" alt="">
       <div class="userbtn flex items-center">
         <div>
           <nuxt-link to="/user/profile" id="profile" v-if="log" class="flex items-center text-dark p-2 login" title="پروفایل">
@@ -16,19 +14,25 @@
           </nuxt-link>
           <nuxt-link to="user/SignIn" v-if="!log" class="flex items-center text-dark p-2 login button is-warning is-light" title="ثبت و نام | ورود">ثبت و نام | ورود</nuxt-link>
         </div>
-        <button @click="cart" class="text-dark m-2 button is-danger is-small is-outlined" title="سبد خرید"><i class="bi bi-cart3 font-bold"></i></button>
+        <i @click="cart" title="سبد خرید" class="bi bi-cart2"></i>
       </div>
     </div>
     <!-- menu buttons for scroll-->
     <div class="menu w-full flex items-center justify-between">
-      <div class="mahsol flex mb-3">
-        <button class="button is-danger is-small is-outlined mr-2 por" title="پر فروش ها"><i class="bi bi-patch-check-fill"></i>پر فروش ها</button>
-        <button @click="janbe" class="button is-danger is-small is-outlined mr-2" title="جانبی"><i class="bi bi-earbuds"></i> جانبی  </button>
-        <button @click="xange" class="button is-danger is-small is-outlined mr-2" title="خانگی"><i class="bi bi-house-fill"></i>خانگی  </button>
-        <button @click="sanate" class="button is-danger is-small is-outlined mr-2"  title="صنعتی"><i class="bi bi-wrench-adjustable-circle-fill"></i> صنعتی  </button>
-        <button @click="xorake" class="button is-danger is-small is-outlined mr-2" title="خوراکی"><i class="bi bi-egg-fried"></i>خوراکی  </button>
-      </div>
-       <p class="data ml-1" :title="Fulldate">{{date}}</p>
+      <ul class="mahsol flex mb-3">
+        <details v-if="scr <= 600">
+           <summary><i class="bi bi-list mb-2 "></i></summary>
+           <li @click="janbe" class=" mt-2 p-1" title="جانبی"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
+           <li @click="xange" class=" mt-2 p-1" title="خانگی"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
+           <li @click="sanate" class=" mt-2 p-1"  title="صنعتی"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
+        </details>
+        <li v-if="scr > 600" @click="janbe" class=" mr-4" title="جانبی"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
+        <li v-if="scr > 600" @click="xange" class=" mr-4" title="خانگی"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
+        <li v-if="scr > 600" @click="sanate" class=" mr-4"  title="صنعتی"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
+        <li @click="xorake" class=" mr-5 " title="خوراکی">سوالی دارید؟</li>
+        <li @click="xorake" class=" mr-4" title="خوراکی">فروشنده شوید!</li>
+      </ul>
+       <p class="data ml-1 m-2" :title="Fulldate">{{date}}</p>
     </div>
   </div>
 </div>
@@ -44,6 +48,7 @@ export default {
       img:null,
       datae:null,
       Fulldate:null,
+      scr:null,
       top:1600,
       top2:2100,
       top3:2600,
@@ -101,30 +106,68 @@ export default {
     }
     this.date = date.toLocaleDateString('fa-IR', option)
     this.Fulldate = date.toLocaleDateString('fa-IR', Fulloption)
+
+    this.scr = window.screen.width
   }
 }
 </script>
 <style scoped>
-.bi-cart3{
-  font-size: 20px;
+.bi-cart2{
+  font-size: 30px;
+  margin: 10px;
+}
+.bi-cart2:hover{
+  cursor: pointer;
+  color: black;
+}
+.mahsol li{
+  font-size: 11px;
+  padding-bottom: 5px;
+  background-image:
+    linear-gradient(
+     transparent 0%,
+     transparent 90%,
+     #ef3a4f 90%,
+     #ef3a4f 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 500ms;
+}
+.mahsol li:hover{
+  background-size: 100% 100%;
+  background-position-x: left;
+  cursor: pointer;
+  color: black;
 }
 #profile{
   width: 50px;height: 50px;
-
 }
 img{
   width: 100%;height: 100%;
+}
+.data{
+  font-size: 12px;
+}
+summary{
+  list-style: none;
+}
+details{
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1;
+}
+@media only screen and (max-width: 650px){
+   .mahsol li{
+     font-size: 10px;
+     margin-right: 0px;
+   }
 }
 @media only screen and (max-width: 540px){
     button{
       width: 50px;
       font-size: 8px;
-    }
-    .por{
-      display: none;
-    }
-    .data{
-      font-size: 15px;
     }
 }
 </style>

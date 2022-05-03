@@ -2,7 +2,7 @@
   <div class="app flex flex-col justify-between">
     <!-- header component -->
     <div class="headerSite">
-      <headersite/>
+      <Header/>
     </div>
     <!-- content page-->
     <div class="content flex flex-col items-center ">
@@ -105,8 +105,8 @@
         </div>
       </div>
       <!-- last image -->
-      <img src="../assets/images/last-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 97%;" alt="">
-      <img src="../assets/images/last-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 97%;" alt="">
+      <img src="../assets/images/last-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 96%;" alt="">
+      <img src="../assets/images/last-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 96%;" alt="">
     </div>
     <!-- footer site -->
     <div class="footerSite"><footersite/></div>
@@ -117,12 +117,12 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import headersite from "~/components/header";
 import grups from "~/components/grups";
 import footersite from "~/components/footer";
+import Header from "~/components/header";
 export default {
   name: 'home',
-  components:{headersite,grups,footersite,VueSlickCarousel},
+  components:{Header, grups,footersite,VueSlickCarousel},
   data(){
     return{
       screen:null,
@@ -175,14 +175,14 @@ export default {
 }
 .apps{
   background-color: #3c4b6d;
-  width: 97%;
+  width: 96%;
   border-radius: 10px;
 }
 .download img{
   width: 25%;
 }
 .overproducts{
-  width: 97%;
+  width: 96%;
   height: 350px;
   background-color: #ef3a4f;
   border-radius: 10px;
@@ -213,7 +213,7 @@ export default {
   }
   .imgs{
   flex-wrap: wrap;
-  width: 100%;
+  width: 99%;
 }
   .imgs img{
     width: 45%;
@@ -223,7 +223,7 @@ export default {
 
   }
   .download{
-    width: 100%;
+    width: 99%;
     justify-content: space-between;
   }
   .download img{
@@ -291,7 +291,7 @@ export default {
 }
 @media only screen and (max-width: 400px){
 	  .imgs img{
-      width: 95%;
+      width: 96%;
     }
   .overproducts{
     height: 228px;

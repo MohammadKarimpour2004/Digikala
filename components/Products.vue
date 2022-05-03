@@ -35,7 +35,9 @@ export default {
            img: this.img,
            qemat: this.qemat,
            off: this.off,
-           number:1
+           number:1,
+           like:false,
+           star: Math.floor(Math.random() * 3)
          }
          // push object in marts
          marts.unshift(mart)
