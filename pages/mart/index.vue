@@ -8,6 +8,11 @@
     <h4>{{len}}</h4>
   </div>
   <!-- items -->
+  <div class="content flex flex-col items-center justify-start">
+    <div v-if="len == 0" class="none-product flex flex-col items-center">
+      <img src="../../assets/images/back-market.png" alt="">
+      <h1>هیچ محصولی در سبد وجود ندارد!</h1>
+    </div>
  <div class="mart flex justify-between items-center" v-for="mart in marts">
    <div class="name flex flex-col justify-between h-full">
      <div class="flex">
@@ -25,7 +30,7 @@
          </div>
        </div>
        <div>
-        <h1 class="text-xl">{{mart.title}}</h1>
+        <h5 class="text-xl">{{mart.title}}</h5>
         <p>{{mart.qemat}} تومان</p>
        </div>
      </div>
@@ -34,7 +39,7 @@
    <div class="more flex flex-col  justify-between">
      <div class="number flex">
        <button @click="mart.number++" class="m-2">+</button>
-       <h1 class="m-2">{{mart.number}}</h1>
+       <h5 class="m-2">{{mart.number}}</h5>
        <button v-if="mart.number > 1" @click="mart.number--" class="m-2">-</button>
        <button v-if="mart.number == 1"  class="m-2">-</button>
 
@@ -44,6 +49,7 @@
      <button @click="bay(mart.title)" class="button is-danger is-small">خرید</button>
    </div>
  </div>
+    </div>
   <Footer class="mt-12"/>
 </div>
 </template>
@@ -61,9 +67,14 @@ export default {
     }
   },
   mounted() {
+    /*if (JSON.parse(localStorage.getItem('marts')).length == 0){
+         let content = document.querySelector('.content')
+         content.style.backgroundImage = "url('../assets/images/back-market.png');"
+    }*/
     //get items in localstorage
     this.marts  = JSON.parse(localStorage.getItem('marts'))
     this.len = JSON.parse(localStorage.getItem('marts')).length
+
   },
   methods:{
     bay(title){
@@ -106,10 +117,17 @@ export default {
   border-bottom: 2px solid black;
 }
 .header h1{
-  font-size: 30px;
+  font-size: 25px;
+}
+.content{
+  width: 100%;
+  min-height: 80vh;
 }
 .more{
   height: 100%;
+}
+.number{
+  background-color: white;
 }
 h4{
   color: white;
@@ -126,19 +144,25 @@ i{
   font-size: 15px;
 }
 @media only screen and (max-width: 540px){
-    .mart h1{
-      font-size: 20px;
+    .mart h5{
+      font-size: 15px;
     }
+  .none-product h1{
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 400px){
     .mart h1{
-      font-size: 15px;
+      font-size: 12px;
     }
   .mart p{
-    font-size: 10px;
+    font-size: 8px;
   }
   .more{
-    width: 30%;
+    width: 25%;
+  }
+  .none-product h1{
+    font-size: 13px;
   }
 }
 </style>

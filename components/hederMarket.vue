@@ -8,7 +8,7 @@
       </nuxt-link>
       <nuxt-link to="./../user/SignIn" v-if="!log" class="flex items-center text-dark p-2 login button is-warning is-light" title="ثبت و نام | ورود"> ثبت و نام | ورود <i class="bi bi-person fs-1"></i></nuxt-link>
     </div>
-    <button @click="cart" class="text-dark m-2 button is-danger is-small is-outlined" title="سبد خرید"><i class="bi bi-cart3 font-bold"></i></button>
+    <i @click="cart" title="سبد خرید" class="bi bi-cart2"></i>
   </div>
 </template>
 <script>
@@ -57,5 +57,13 @@ export default {
 }
 img{
   width: 100%;height: 100%;
+}
+.bi-cart2{
+  font-size: 30px;
+  margin: 10px;
+}
+.bi-cart2:hover{
+  cursor: pointer;
+  color: black;
 }
 </style>
