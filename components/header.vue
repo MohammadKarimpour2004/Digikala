@@ -6,6 +6,7 @@
   <div class="menus grid w-full h-28 content-between">
     <div class="search-user flex items-center w-full justify-between">
        <img src="https://www.digikala.com/statics/img/svg/logo.svg" class="mr-2" style="width: 115px;" alt="">
+      <!-- user profile -->
       <div class="userbtn flex items-center">
         <div>
           <nuxt-link to="/user/profile" id="profile" v-if="log" class="flex items-center text-dark p-2 login" title="پروفایل">
@@ -17,22 +18,25 @@
         <i @click="cart" title="سبد خرید" class="bi bi-cart2"></i>
       </div>
     </div>
-    <!-- menu buttons for scroll-->
-    <div class="menu w-full flex items-center justify-between">
+    <!-- menu buttons-->
+    <div class="menu w-full flex items-start justify-between">
       <ul class="mahsol flex mb-3">
         <details v-if="scr <= 600">
-           <summary><i class="bi bi-list mb-2 "></i></summary>
-           <li @click="janbe" class=" mt-2 p-1" title="جانبی"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
-           <li @click="xange" class=" mt-2 p-1" title="خانگی"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
-           <li @click="sanate" class=" mt-2 p-1"  title="صنعتی"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
+          <!-- menu -->
+           <summary><i class="bi bi-list mb-2 ml-2" style="font-size: 22px"></i></summary>
+           <li class=" mt-2 p-1"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
+           <li class=" mt-2 p-1"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
+           <li class=" mt-2 p-1"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
+           <li class=" mt-2 p-1"><i class="bi bi-question-lg"></i>سوالی دارید؟ </li>
+           <li class=" mt-2 p-1"><i class="bi bi-send-fill"></i>فروشنده شوید! </li>
         </details>
-        <li v-if="scr > 600" @click="janbe" class=" mr-4" title="جانبی"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
-        <li v-if="scr > 600" @click="xange" class=" mr-4" title="خانگی"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
-        <li v-if="scr > 600" @click="sanate" class=" mr-4"  title="صنعتی"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
-        <li @click="xorake" class=" mr-5 " title="خوراکی">سوالی دارید؟</li>
-        <li @click="xorake" class=" mr-4" title="خوراکی">فروشنده شوید!</li>
+        <li v-if="scr > 600" @click="janbe" class=" mr-4"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
+        <li v-if="scr > 600"  class=" mr-4"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
+        <li v-if="scr > 600"  class=" mr-4"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>
+        <li v-if="scr > 600" class=" mr-5 ">سوالی دارید؟</li>
+        <li v-if="scr > 600" class=" mr-4">فروشنده شوید!</li>
       </ul>
-       <p class="data ml-1 m-2" :title="Fulldate">{{date}}</p>
+      <p class="data ml-1 m-2" :title="Fulldate">{{date}}</p>
     </div>
   </div>
 </div>
@@ -49,10 +53,6 @@ export default {
       datae:null,
       Fulldate:null,
       scr:null,
-      top:1600,
-      top2:2100,
-      top3:2600,
-      top4:3000
     }
   },
   methods:{
@@ -74,17 +74,8 @@ export default {
     },
     // scrolls event
     janbe(){
-      window.scrollTo({top:this.top, behavior: 'smooth'})
-    },
-    xange(){
-      window.scrollTo({top:this.top2, behavior: 'smooth'})
-    },
-    sanate(){
-      window.scrollTo({top:this.top3, behavior: 'smooth'})
-    },
-    xorake(){
-      window.scrollTo({top:this.top4, behavior: 'smooth'})
-    },
+      window.scrollTo({ top:2000, behavior: 'smooth'})
+    }
   },
   // get info
   mounted() {
@@ -106,7 +97,6 @@ export default {
     }
     this.date = date.toLocaleDateString('fa-IR', option)
     this.Fulldate = date.toLocaleDateString('fa-IR', Fulloption)
-
     this.scr = window.screen.width
   }
 }

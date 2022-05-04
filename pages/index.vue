@@ -220,7 +220,6 @@ export default {
   }
   .log{
     display: none;
-
   }
   .download{
     width: 99%;
@@ -245,7 +244,7 @@ export default {
   }
   .product h4{
   font-size: 13px;
-}
+ }
 }
 @media only screen and (max-width: 690px){
     .apps{

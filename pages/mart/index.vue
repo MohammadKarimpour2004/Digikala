@@ -18,6 +18,7 @@
      <div class="flex">
        <div class="flex flex-col items-center">
      <img :src="require(`../../assets/product-img/${mart.img}.jpg`)" width="95" class="ml-3" alt="">
+         <!-- stars icon -->
        <div class="stars">
            <i v-if="mart.star < 3 " class="bi bi-star"></i>
            <i v-if="mart.star < 2 " class="bi bi-star"></i>
@@ -34,7 +35,6 @@
         <p>{{mart.qemat}} تومان</p>
        </div>
      </div>
-
    </div>
    <div class="more flex flex-col  justify-between">
      <div class="number flex">
@@ -42,11 +42,12 @@
        <h5 class="m-2">{{mart.number}}</h5>
        <button v-if="mart.number > 1" @click="mart.number--" class="m-2">-</button>
        <button v-if="mart.number == 1"  class="m-2">-</button>
-
-       <i @click="mart.like = !mart.like" v-if="mart.like == false" class="bi bi-heart m-1"></i>
-       <i @click="mart.like = !mart.like" v-if="mart.like == true" class="bi bi-heart-fill m-1" style="color: #ef3a4f"></i>
      </div>
-     <button @click="bay(mart.title)" class="button is-danger is-small">خرید</button>
+     <div class="flex items-center">
+        <i @click="mart.like = !mart.like" v-if="mart.like == false" class="bi bi-heart m-1 text-2xl mt-2"></i>
+       <i @click="mart.like = !mart.like" v-if="mart.like == true" class="bi bi-heart-fill m-1 text-2xl mt-2" style="color: #ef3a4f"></i>
+       <button @click="bay(mart.title)" class="button is-danger is-small w-full">خرید</button>
+     </div>
    </div>
  </div>
     </div>
@@ -67,14 +68,8 @@ export default {
     }
   },
   mounted() {
-    /*if (JSON.parse(localStorage.getItem('marts')).length == 0){
-         let content = document.querySelector('.content')
-         content.style.backgroundImage = "url('../assets/images/back-market.png');"
-    }*/
-    //get items in localstorage
     this.marts  = JSON.parse(localStorage.getItem('marts'))
     this.len = JSON.parse(localStorage.getItem('marts')).length
-
   },
   methods:{
     bay(title){
@@ -92,7 +87,6 @@ export default {
          })
       this.marts  = JSON.parse(localStorage.getItem('marts'))
       this.len = JSON.parse(localStorage.getItem('marts')).length
-
     }
   }
 }
@@ -104,7 +98,6 @@ export default {
 .mart{
   width: 98%;
   height: 130px;
-
   background-color: #ffffff;
   border-bottom: 1px solid #616060;
   padding: 10px;
@@ -135,9 +128,6 @@ h4{
   padding: 5px;
   margin: 10px;
   border-radius: 50px;
-}
-i{
-  margin-right: 10px;
 }
 .stars i{
   margin: 0px;
