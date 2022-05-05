@@ -48,7 +48,7 @@
           <button  class="button is-white is-small ">عضویت<i class="bi bi-chevron-compact-left"></i></button>
         </div>
         <div class="product flex justify-between">
-           <div v-for="item in overItems" class="flex flex-col items-center">
+           <div v-for="item in overItems" class="flex flex-col items-center justify-around">
              <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
              <h4>{{item.qemat}} تومان </h4>
            </div>
@@ -58,14 +58,10 @@
       <img src="../assets/images/ferst-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 96%;" alt="">
       <img src="../assets/images/ferst-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 96%;" alt="">
       <!-- market grup -->
-      <div class="grups flex flex-col items-center">
-          <br>
+      <div class="grups flex flex-col items-center justify-evenly">
           <grups title="جانبی" text="انواع لوزم جانبی با کیفیت را از ما با بهترین قیمت ممکن بخرید! لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="1" addres="janbe"/>
-          <br>
           <grups title="خانگی" text="اسایش را در خانه با محصولات ما افزایش دهید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="2" addres="xange"/>
-          <br>
           <grups title="صنعتی" text="کار خود را توسعه دهید با لوارم اصلی از سایت ما!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="3" addres="sanate"/>
-          <br>
           <grups title="خوراکی" text="خوراکی های سالم و خوشمزه و تازه را از این سایت تهیه کنید تا پرورش عالی را تجربه کنید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="4" addres="xorake"/>
       </div>
       <br>
@@ -81,10 +77,10 @@
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
           <img src="../assets/images/General.png" width="100" alt="">
-          <h4 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h4>
+          <h5 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h5>
         </div>
         <div class="product flex justify-between">
-           <div v-for="item in overItems2"  class="flex flex-col items-center">
+           <div v-for="item in overItems2"  class="flex flex-col items-center justify-around">
              <img :src="require(`../assets/product-img/${item.img}.jpg`)" style="width: 100%;" alt="">
              <h4>{{item.qemat}} تومان </h4>
            </div>
@@ -138,16 +134,16 @@ export default {
         {text:'پیندو',number:8}
       ],
       overItems:[
-        {img:39,qemat:'570,000'},
-        {img:40,qemat:'299,000'},
-        {img:46,qemat:'370,000'},
-        {img:48,qemat:'899,000'}
+        {img:39,qemat:'۵۷۰,۰۰۰'},
+        {img:40,qemat:'۲۹۹,۰۰۰'},
+        {img:46,qemat:'۳۷۰,۰۰۰'},
+        {img:48,qemat:'۸۹۹,۰۰۰'}
       ],
       overItems2:[
-        {img:6,qemat:'700,000'},
-        {img:42,qemat:'310,000'},
-        {img:47,qemat:'199,000'},
-        {img:44,qemat:'650,000'}
+        {img:6,qemat:'۷۰۰,۰۰۰'},
+        {img:42,qemat:'۳۱۰,۰۰۰'},
+        {img:47,qemat:'۱۹۹,۰۰۰'},
+        {img:44,qemat:'۶۵۰,۰۰۰'}
       ]
     }
   },
@@ -287,6 +283,9 @@ export default {
   .text-title{
     font-size: 11px;
   }
+  .product h4{
+  font-size: 11px;
+ }
 }
 @media only screen and (max-width: 400px){
 	  .imgs img{

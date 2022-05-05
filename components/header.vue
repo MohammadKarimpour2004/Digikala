@@ -23,7 +23,7 @@
       <ul class="mahsol flex mb-3">
         <details v-if="scr <= 600">
           <!-- menu -->
-           <summary><i class="bi bi-list mb-2 ml-2" style="font-size: 22px"></i></summary>
+           <summary><i class="bi bi-list mb-2 mr-2" style="font-size: 22px"></i></summary>
            <li class=" mt-2 p-1"><i class="bi bi-lightning-charge-fill"></i> پرفروش‌ترین‌ها  </li>
            <li class=" mt-2 p-1"><i class="bi bi-percent"></i>تخفیف‌ها و پیشنهادها</li>
            <li class=" mt-2 p-1"><i class="bi bi-check"></i> شگفت‌انگیزها  </li>

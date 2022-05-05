@@ -1,5 +1,5 @@
 <template>
-<div class="grup flex  flex-row-reverse mt-12 p-3 rounded-lg mr-3">
+<div class="grup flex  flex-row-reverse mt-12 p-3 rounded-lg ">
   <!-- image -->
    <img @click="link" :src="require(`.././assets/images/grup/grup${img}.jpg`)" alt="" class="m-4 rounded-lg">
   <!-- text -->
@@ -43,6 +43,13 @@ export default {
     }
     img{
       width: 100%;
+      margin: 0px;
+    }
+    h1{
+      font-size: 15px;
+    }
+    p{
+      font-size: 10px;
     }
 }
 </style>
