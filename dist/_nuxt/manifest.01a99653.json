@@ -1,9 +1,9 @@
 {
-  "name": "marketApp",
-  "short_name": "marketApp",
+  "name": "digikala",
+  "short_name": "digikala",
   "icons": [],
   "start_url": "/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
-  "lang": "en"
+  "lang": "fa"
 }
