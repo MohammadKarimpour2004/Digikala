@@ -74,7 +74,7 @@ export default {
     },
     // scrolls event
     janbe(){
-      window.scrollTo({ top:2000, behavior: 'smooth'})
+      window.scrollTo({ top:3500, behavior: 'smooth'})
     }
   },
   // get info

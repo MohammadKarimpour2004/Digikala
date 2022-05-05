@@ -17,7 +17,7 @@
    <div class="name flex flex-col justify-between h-full">
      <div class="flex">
        <div class="flex flex-col items-center">
-     <img :src="require(`../../assets/product-img/${mart.img}.jpg`)" width="95" class="ml-3" alt="">
+     <img :src="require(`../../assets/product-img/${mart.img}.jpg`)" width="95" class="ml-3 rounded-md" alt="">
          <!-- stars icon -->
        <div class="stars">
            <i v-if="mart.star < 3 " class="bi bi-star"></i>
@@ -43,7 +43,7 @@
        <button v-if="mart.number > 1" @click="mart.number--" class="m-2">-</button>
        <button v-if="mart.number == 1"  class="m-2">-</button>
      </div>
-     <div class="flex items-center">
+     <div class="flex items-center bay">
         <i @click="mart.like = !mart.like" v-if="mart.like == false" class="bi bi-heart m-1 text-2xl mt-2"></i>
        <i @click="mart.like = !mart.like" v-if="mart.like == true" class="bi bi-heart-fill m-1 text-2xl mt-2" style="color: #ef3a4f"></i>
        <button @click="bay(mart.title)" class="button is-danger is-small w-full">خرید</button>
@@ -130,8 +130,10 @@ h4{
   border-radius: 50px;
 }
 .stars i{
-  margin: 0px;
   font-size: 15px;
+}
+.bay i:hover{
+  cursor: pointer;
 }
 @media only screen and (max-width: 540px){
     .mart h5{
