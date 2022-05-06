@@ -1,5 +1,5 @@
 <template>
-<div class="grup flex  flex-row-reverse mt-12 p-3 rounded-lg ">
+<div class="grup flex mb-12 flex-row-reverse   rounded-lg ">
   <!-- image -->
    <img @click="link" :src="require(`.././assets/images/grup/grup${img}.jpg`)" alt="" class="m-4 rounded-lg">
   <!-- text -->
@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .grup{
   background-color: #faf7f7;
-  width: 96%;
+  width: 97%;
 }
 @media only screen and (max-width: 1124px){
     img{
@@ -46,10 +46,18 @@ export default {
       margin: 0px;
     }
     h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 15px;
+    }
+}
+@media only screen and (max-width: 400px){
+    h1{
       font-size: 15px;
     }
     p{
-      font-size: 10px;
+      font-size: 11px;
     }
 }
 </style>

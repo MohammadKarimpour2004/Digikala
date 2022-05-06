@@ -39,13 +39,12 @@
         <img src="../assets/images/next-items2.jpg" class=" m-1 rounded-lg" alt="">
       </div>
       <!-- off text to center -->
-      <div class="text-title flex items-center mb-12"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></div>
+      <h3 class="text-title flex items-center"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
        <!-- 4 products -->
-       <div style="background-color: #941b80; border: 5px solid #941b80" class="overproducts flex justify-between mb-12">
+       <div style="background-color: #941b80; border: 5px solid #941b80" class="overproducts flex justify-between mb-12 mt-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/digiplus-logo.svg" width="100"  alt="">
-          <img src="../assets/images/plus-widget.png" width="100" alt="">
-          <button  class="button is-white is-small ">عضویت<i class="bi bi-chevron-compact-left"></i></button>
+          <img src="../assets/images/plus-widget.png" width="135" alt="">
         </div>
         <div class="product flex justify-between">
            <div v-for="item in overItems" class="flex flex-col items-center justify-around">
@@ -77,7 +76,6 @@
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
           <img src="../assets/images/General.png" width="100" alt="">
-          <h5 style="color: white">مشاهده همه<i class="bi bi-chevron-compact-left"></i></h5>
         </div>
         <div class="product flex justify-between">
            <div v-for="item in overItems2"  class="flex flex-col items-center justify-around">
@@ -204,7 +202,7 @@ export default {
     width: 40px;
   }
   .imgitem p{
-    font-size: 5px;
+    font-size: 6px;
   }
   .imgs{
   flex-wrap: wrap;
@@ -256,7 +254,7 @@ export default {
     font-size: 20px;
   }
   .text-title{
-    font-size: 15px;
+    font-size: 13px;
   }
   .overproducts{
     height: 299px;
@@ -300,7 +298,6 @@ export default {
     }
   .overproducts{
     height: 228px;
-    margin-bottom: 15px;
   }
 }
 @media only screen and (max-width: 362px){
@@ -315,6 +312,12 @@ export default {
  }
   .text-title{
     font-size: 8px;
+  }
+  .logoProduct img{
+    width: 50px;
+  }
+  .logoProduct img{
+    width: 50px;
   }
 }
 </style>
