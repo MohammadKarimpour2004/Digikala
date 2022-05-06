@@ -5,10 +5,10 @@
       <Header/>
     </div>
     <!-- content page-->
-    <div class="content flex flex-col items-center ">
+    <div class="content flex flex-col items-center justify-between">
       <!-- images -->
       <div class="title flex justify-center  w-full ">
-        <VueSlickCarousel v-if="screen > 610" class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
+        <VueSlickCarousel v-if="screen > 610" class="VueSlickCarousel mb-12" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd1.jpg" alt="خوراکی"></nuxt-link>
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd2.jpg" alt="صنعتی"></nuxt-link>
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd8.gif" alt="جانبی"></nuxt-link>
@@ -18,7 +18,7 @@
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd7.jpg" alt="جانبی"></nuxt-link>
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd3.jpg" alt="جانبی"></nuxt-link>
         </VueSlickCarousel>
-        <VueSlickCarousel v-if="screen <= 610" class="VueSlickCarousel" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
+        <VueSlickCarousel v-if="screen <= 610" class="VueSlickCarousel mb-12" :arrows="false"  :autoplay="true" :speed="900"  :autoplaySpeed="5000" :dots="false">
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small1.jpg" alt="جانبی"></nuxt-link>
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small2.jpg" alt="جانبی"></nuxt-link>
           <nuxt-link to="./market"><img  src="../assets/images/img-slyd/slyd-small3.jpg" alt="جانبی"></nuxt-link>
@@ -27,21 +27,21 @@
         </VueSlickCarousel>
       </div>
       <!-- items for option in site -->
-      <div class="items w-full flex justify-evenly mt-12 mb-12">
+      <div class="items w-full flex justify-evenly  mb-12">
         <div v-for="item in items" class="flex flex-col items-center imgitem ">
           <a href="#"><img :src="require(`./../assets/images/items/${item.number}.png`)"  alt="img" width="55"></a>
           <p class="text-s">{{item.text}}</p>
         </div>
       </div>
       <!-- 2 image-->
-      <div class="images flex justify-center">
-        <img src="../assets/images/next-items1.jpg" style="width: 65%;" class=" m-3 rounded-lg" alt="">
-        <img src="../assets/images/next-items2.jpg" style="width: 30%" class=" b m-3 rounded-lg" alt="">
+      <div class="images flex justify-evenly mb-12">
+        <img src="../assets/images/next-items1.jpg" class=" m-1 rounded-lg" alt="">
+        <img src="../assets/images/next-items2.jpg" class=" m-1 rounded-lg" alt="">
       </div>
       <!-- off text to center -->
-      <h3 class="text-title mt-6"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></h3>
+      <div class="text-title flex items-center mb-12"><i class="bi bi-percent text-red-600 font-bold"></i>سایت ما با تخفیفات و جشنواره های فراوان در خدمت مشتریان خود میباشد<i class="bi bi-percent text-red-600 font-bold"></i></div>
        <!-- 4 products -->
-       <div style="background-color: #941b80; border: 5px solid #941b80" class="overproducts flex justify-between mt-12 mb-12">
+       <div style="background-color: #941b80; border: 5px solid #941b80" class="overproducts flex justify-between mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/digiplus-logo.svg" width="100"  alt="">
           <img src="../assets/images/plus-widget.png" width="100" alt="">
@@ -55,10 +55,10 @@
         </div>
       </div>
       <!-- last image -->
-      <img src="../assets/images/ferst-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 96%;" alt="">
-      <img src="../assets/images/ferst-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 96%;" alt="">
+      <img src="../assets/images/ferst-small-img.jpg" v-if="screen <= 824 " class="rounded-md mb-12" style="width: 96%;" alt="">
+      <img src="../assets/images/ferst-img.jpg" v-if="screen > 824" class="rounded-md mb-12" style="width: 96%;" alt="">
       <!-- market grup -->
-      <div class="grups flex flex-col items-center justify-evenly">
+      <div class="grups flex flex-col items-center justify-evenly mb-12">
           <grups title="جانبی" text="انواع لوزم جانبی با کیفیت را از ما با بهترین قیمت ممکن بخرید! لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="1" addres="janbe"/>
           <grups title="خانگی" text="اسایش را در خانه با محصولات ما افزایش دهید!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="2" addres="xange"/>
           <grups title="صنعتی" text="کار خود را توسعه دهید با لوارم اصلی از سایت ما!  لوازم های جانبی ما تمامی از برند های اورجینال و اصلی تهیه میشوند تا مشتریان بتوانند با خیال راحت از ما خرید بکنند." img="3" addres="sanate"/>
@@ -66,14 +66,14 @@
       </div>
       <br>
       <!-- 4 image -->
-      <div class="imgs flex justify-around items-center">
+      <div class="imgs flex justify-around items-center mb-12">
         <img src="../assets/images/4img/img1.jpg" alt="">
         <img src="../assets/images/4img/img2.jpg" alt="">
         <img src="../assets/images/4img/img3.jpg" alt="">
         <img src="../assets/images/4img/img4.jpg" alt="">
       </div>
       <!-- 4 products -->
-       <div class="overproducts flex justify-between mt-12 mb-12">
+       <div class="overproducts flex justify-between mb-12">
         <div class="flex flex-col items-center justify-center logoProduct">
           <img src="https://www.digikala.com/statics/img/svg/amazing-typo.svg" width="100"  alt="">
           <img src="../assets/images/General.png" width="100" alt="">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <!-- download apps -->
-      <div class="apps flex justify-between items-center mt-12 p-4 mb-12">
+      <div class="apps flex justify-between items-center p-4  mb-12">
         <div class="flex items-center log">
           <img src="../assets/images/download-logo.png" class="logo"  alt="">
           <h3 class="m-0 mr-2" style="color: white">دانلود اپلیکیشن</h3>
@@ -101,8 +101,8 @@
         </div>
       </div>
       <!-- last image -->
-      <img src="../assets/images/last-small-img.jpg" v-if="screen <= 824 " class="rounded-md" style="width: 96%;" alt="">
-      <img src="../assets/images/last-img.jpg" v-if="screen > 824" class="rounded-md" style="width: 96%;" alt="">
+      <img src="../assets/images/last-small-img.jpg" v-if="screen <= 824 " class="rounded-md mb-12" style="width: 96%;" alt="">
+      <img src="../assets/images/last-img.jpg" v-if="screen > 824" class="rounded-md mb-12" style="width: 96%;" alt="">
     </div>
     <!-- footer site -->
     <div class="footerSite"><footersite/></div>
@@ -155,14 +155,13 @@ export default {
 </script>
 <style scoped>
 .app{
-  width: 100%; height: 100vh;
+  width: 100%;
 }
 .VueSlickCarousel{
   width: 100%;
 }
-.images{
-  background-color: #ef3a4f;
-  padding: 15px;
+.images img{
+  width: 48%;
 }
 .imgs img{
   width: 22%;
@@ -288,6 +287,14 @@ export default {
  }
 }
 @media only screen and (max-width: 400px){
+    .images{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  .images img{
+    width: 96%;
+  }
 	  .imgs img{
       width: 96%;
     }
